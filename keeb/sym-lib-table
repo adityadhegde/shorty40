@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "Keybored")(type "KiCad")(uri "${KIPRJMOD}/Keybored.kicad_sym")(options "")(descr ""))
+  (lib (name "Rpi")(type "KiCad")(uri "/home/robin/Downloads/KiCad-RP-Pico-main/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
+)

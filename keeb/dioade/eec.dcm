@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1N4148
+D 1N4148
+F http://diotec.com/tl_files/diotec/files/pdf/datasheets/1n4148.pdf
+$ENDCMP
+# end doc library

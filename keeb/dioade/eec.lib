@@ -1,0 +1,33 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Diotec Semiconductor 1N4148
+#
+DEF 1N4148 D 0 40 Y Y 1 L N
+F0 "D" 0 200 50 H V L CNN 
+F1 "1N4148" 0 300 50 H V L CNN 
+F2 "Diotec_Semiconductor-1N4148-*" 0 400 50 H I L CNN 
+F3 "http://diotec.com/tl_files/diotec/files/pdf/datasheets/1n4148.pdf" 0 500 50 H I L CNN 
+F4 "Diode" 0 600 50 H I L CNN "category"
+F5 "" 0 700 50 H I L CNN "digikey description"
+F6 "" 0 800 50 H I L CNN "digikey part number"
+F7 "DIOPA730W65L390D190" 0 900 50 H I L CNN "ipc land pattern name"
+F8 "yes" 0 1000 50 H I L CNN "lead free"
+F9 "79c5eef675996d34" 0 1100 50 H I L CNN "library id"
+F10 "Diotec Semiconductor" 0 1200 50 H I L CNN "manufacturer"
+F11 "" 0 1300 50 H I L CNN "mouser part number"
+F12 "AXIAL" 0 1400 50 H I L CNN "package"
+F13 "yes" 0 1500 50 H I L CNN "rohs"
+F14 "+200°C" 0 1600 50 H I L CNN "temperature range high"
+F15 "-50°C" 0 1700 50 H I L CNN "temperature range low"
+DRAW
+X ANODE 2 100 0 100 R 40 0 1 1 U 
+X CATHODE 1 500 0 100 L 40 0 1 1 U 
+P 2 1 1 0 200 100 200 -100 N
+P 2 1 1 0 400 100 400 -100 N
+P 2 1 1 0 200 100 400 0 N
+P 2 1 1 0 200 -100 400 0 N
+ENDDRAW
+ENDDEF
+#
+# End Library
