@@ -27,6 +27,12 @@ An ortholinear 39key keyboard with a 2U spacebar and KMK support using a Raspber
 * 39 CherryMX Compatible plate mount switches
 * 38 1U Keycaps and 1 2U Keycaps
 * 1 2U plate mount stabilizer
-* 1 3D Printed key plate and 1 3D Printed Case
+* 1 3D Printed key plate
+* 1 3D Printed Case - testing in process
 * 8 5mm M2 screws
 * 4 adhesive silicone/rubber foot2
+
+## Software Setup
+1. Install [circuit python](https://circuitpython.org/)
+2. Get [KMK](https://github.com/KMKfw/kmk_firmware/archive/refs/heads/master.zip) and unzip the files on to the circuit-python/pi-pico drive
+3. Replace the code.py and boot.py files on the Pi-Pico drive with the ones provided on this repository
