@@ -28,12 +28,12 @@ keyboard.keymap = [
         "Q",'W','E','R','T','Y','U','I','O','P',
         'A','S','D','F','G','H','J','K','L','ENT',
         'Z','X','C','V','B','N','M','COMMA','DOT','QUOTE',
-        MOLYR,'RCTL','LGUI','LSFT','SPC',______,'BSLASH','SCOLON','MINUS','BSPC' 
+        MOLYR,'RCTL','LGUI','LSFT','SPC',______,'LALT','SCOLON','MINUS','BSPC' 
     ],
     [
         "F1",'F2','F3','F4','F5','F6','F7','F8','F9','TAB',
         "N1",'N2','N3','N4','N5','N6','N7','N8','N9','N0',
-        'F10','F11','F12','SCOLON','GRAVE','SLASH','EQL','LBRC','RBRC','ESC',
+        'F10','F11','F12','BSLASH','GRAVE','SLASH','EQL','LBRC','RBRC','ESC',
         MOLYR,'RCTL','LGUI','RSFT','SPC',______,'LEFT','DOWN','UP','RIGHT' 
     ],
 
