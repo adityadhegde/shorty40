@@ -30,7 +30,7 @@ An ortholinear 39key keyboard with a 2U spacebar and KMK support using a Raspber
 * 1 3D Printed key plate
 * 1 3D Printed Case - testing in process
 * 8 5mm M2 screws
-* 4 adhesive silicone/rubber foot2
+* 4 adhesive silicone/rubber foot
 
 ## Software Setup
 1. Install [circuit python](https://circuitpython.org/)
