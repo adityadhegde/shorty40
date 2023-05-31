@@ -7,6 +7,9 @@ from kmk.keys import KC
 from kmk.scanners import DiodeOrientation
 from kmk.extensions.stringy_keymaps import StringyKeymaps
 from kmk.modules.modtap import ModTap
+from kmk.modules.string_substitution import StringSubstitution
+
+
 
 rollover_cols_every_rows = 4
 
@@ -17,6 +20,90 @@ keyboard.modules.append(Layers())
 
 modtap = ModTap()
 keyboard.modules.append(modtap)
+
+translations = {
+    ':data':"""import pandas as np
+import numpy as np""",
+
+
+    ':viz':"""from bokeh.models import ColumnDataSource, HoverTool
+from bokeh.plotting import figure
+
+fig=figure()
+""",
+
+
+    ':email':"""from email import encoders
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.utils import formatdate
+import smtplib
+from email.mime.application import MIMEApplication
+
+send_from = 'placeholder@domain.com'
+send_to = 'placeholder@domain.com'
+
+msg = MIMEMultipart()
+msg["From"] = send_from
+msg["To"] = send_to
+msg["Subject"] = '{{{placeholder}}}'
+
+message = '{{{placeholder}}}'
+message = MIMEText(message, "plain")
+msg.attach(message)
+
+s = smtplib.SMTP()
+s.connect(host="smtp.domain.com")
+s.sendmail(send_from, send_to.split(","), msg.as_string())
+s.close()
+
+""",
+
+
+    ':sign':"""Thank You,
+John Doe""",
+
+
+    ':mysql':"""import mysql.connector
+from sqlalchemy import create_engine
+import urllib
+
+
+host='{{{placeholder}}}'
+user='{{{placeholder}}}'
+password='{{{placeholder}}}'
+database = '{{{placeholder}}}'
+sql = '{{{placeholder}}}'
+
+engine = create_engine('mysql+pymysql://{user}:{psw}@{host}/{db}'.format(user=user,host=host,db=database,psw=urllib.parse.quote(password)))
+data = pd.read_sql(sql, engine)
+
+engine.dispose()
+""",
+
+
+    ':redshift':"""import redshift_connector
+import urllib
+
+
+host='{{{placeholder}}}'
+user='{{{placeholder}}}'
+password='{{{placeholder}}}'
+database = '{{{placeholder}}}'
+port = '{{{placeholder}}}'
+sql = '{{{placeholder}}}'
+
+conn = redshift_connector.connect(host= host,port= port,database= database,user= user,password= password)
+data = pd.read_sql(sql, conn)
+
+conn.dispose()
+"""
+}
+
+string_substitution = StringSubstitution(dictionary = translations)
+
+keyboard.modules.append(string_substitution)
 
 keyboard.col_pins = (
     board.GP28,board.GP27,board.GP26,
